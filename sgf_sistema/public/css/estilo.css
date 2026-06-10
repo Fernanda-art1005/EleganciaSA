@@ -1,0 +1,145 @@
+/* =============================================
+   SGF — Sistema de Gestão de Ferramentaria
+   Folha de Estilos Principal (estilo.css)
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --cor-primaria:  #1a3c5e;
+    --cor-sucesso:   #2e7d32;
+    --cor-alerta:    #c62828;
+    --cor-neutro:    #546e7a;
+    --cor-fundo:     #f4f6f8;
+    --cor-branco:    #ffffff;
+    --raio:          8px;
+    --sombra:        0 2px 8px rgba(0,0,0,.12);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--cor-fundo);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--sombra);
+}
+.topbar h1 { font-size: 1.2rem; font-weight: 600; letter-spacing: .5px; }
+.btn-voltar {
+    color: #90caf9;
+    text-decoration: none;
+    font-size: .85rem;
+    transition: color .2s;
+}
+.btn-voltar:hover { color: var(--cor-branco); }
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--cor-branco);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    border-left: 5px solid transparent;
+}
+.card-verde  { border-color: var(--cor-sucesso); }
+.card-azul   { border-color: var(--cor-primaria); }
+.card-vermelho { border-color: var(--cor-alerta); }
+.card-cinza  { border-color: var(--cor-neutro); }
+
+.card-label  { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: #555; }
+.card-valor  { font-size: 2.5rem; font-weight: 800; color: var(--cor-primaria); }
+.card-meta   { font-size: .75rem; color: #777; }
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: .75rem;
+    padding: 1.5rem 2rem .5rem;
+    flex-wrap: wrap;
+}
+.filtros input, .filtros select {
+    padding: .5rem .75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--raio);
+    font-size: .9rem;
+}
+.btn-primario {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    padding: .5rem 1.25rem;
+    border-radius: var(--raio);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background .2s;
+}
+.btn-primario:hover { background: #14304d; }
+
+/* Tabela */
+.tabela-ferramentas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 2rem;
+    background: var(--cor-branco);
+    box-shadow: var(--sombra);
+    border-radius: var(--raio);
+    overflow: hidden;
+}
+.tabela-ferramentas th {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: .75rem 1rem;
+    text-align: left;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+.tabela-ferramentas td {
+    padding: .7rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: .9rem;
+}
+.tabela-ferramentas tr:last-child td { border-bottom: none; }
+.tabela-ferramentas tr:hover td { background: #f0f4f8; }
+
+/* Badges de status */
+.badge {
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 20px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.badge-disponivel  { background: #e8f5e9; color: #2e7d32; }
+.badge-emprestada  { background: #e3f2fd; color: #1565c0; }
+.badge-manutencao  { background: #fff8e1; color: #f57f17; }
+.badge-baixada     { background: #fce4ec; color: #c62828; }
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .topbar { flex-direction: column; gap: .5rem; text-align: center; }
+    .filtros { flex-direction: column; }
+    .tabela-ferramentas { margin: 1rem .5rem; }
+}
