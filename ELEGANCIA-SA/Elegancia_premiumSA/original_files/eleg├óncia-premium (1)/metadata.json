@@ -1,0 +1,6 @@
+{
+  "name": "Elegância Premium",
+  "description": "Sistema moderno e sofisticado para controle de estoque de moda, ponto de vendas e relatórios de desempenho.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

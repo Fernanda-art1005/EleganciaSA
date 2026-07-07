@@ -1,0 +1,12 @@
+{
+    "php.suggest.basic": false,
+    "php.validate.enable": true,
+    "php.memory_limit": "256M",
+    "files.associations": {
+        "*.php": "php"
+    },
+    "emmet.includeLanguages": {
+        "php": "html"
+    },
+    "editor.formatOnSave": true
+}
