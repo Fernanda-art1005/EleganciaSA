@@ -1,0 +1,6 @@
+{
+  "name": "Elegância Premium",
+  "description": "Sistema de Controle e Gestão Comercial para lojas de varejo de moda e acessórios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
