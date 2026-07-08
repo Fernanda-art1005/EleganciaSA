@@ -1,0 +1,15 @@
+{
+  "name": "elegancia-premium",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "php -S 0.0.0.0:3000 public/index.php",
+    "build": "echo 'No Javascript build required for pure PHP 8'",
+    "start": "php -S 0.0.0.0:3000 public/index.php",
+    "clean": "echo 'Clean complete'",
+    "lint": "php -l public/index.php"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
